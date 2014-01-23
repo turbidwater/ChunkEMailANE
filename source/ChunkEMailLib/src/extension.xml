@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+    <id>com.turbidwater.chunkemail</id>
+    <versionNumber>0.0.1</versionNumber>
+    <platforms>
+        <platform name="Android-ARM">
+            <applicationDeployment>
+                <nativeLibrary>ChunkEMailAndroid.jar</nativeLibrary>
+				<initializer>com.turbidwater.chunkemail.ChunkEMail</initializer>
+            </applicationDeployment>
+        </platform>
+
+        <platform name="default">
+            <applicationDeployment/>
+        </platform>     
+    </platforms>
+</extension>

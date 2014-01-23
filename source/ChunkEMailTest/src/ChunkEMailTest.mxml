@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 RealEyes Media LLC. -->
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   applicationComplete="_onApplicationComplete(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.turbidwater.chunkemail.ChunkEMail;
+			
+			import mx.events.FlexEvent;
+			
+			public var chunkEMail:ChunkEMail;
+			
+			private function _onApplicationComplete( event:FlexEvent ):void
+			{
+				chunkEMail = ChunkEMail.getInstance();
+			}
+			
+			private function _onClick( event:MouseEvent ):void
+			{
+				trace( 'sending' );
+				chunkEMail.sendMail( email.text, subject.text, body.text );
+				trace( 'sent' );
+			}
+			
+			
+		]]>
+	</fx:Script>
+	
+	
+	<s:VGroup>
+		<s:Label text="email"/>
+		<s:TextInput id="email" text="nthingvall@gmail.com"/>
+		<s:Label text="subject"/>
+		<s:TextInput id="subject" text="Hi there!" />
+		<s:Label text="body"/>
+		<s:TextInput id="body" text="Hello World" />
+		<s:Button label="send" click="_onClick( event )" />
+	</s:VGroup>
+	
+</s:Application>
