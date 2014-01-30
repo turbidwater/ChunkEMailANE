@@ -7,14 +7,14 @@ This extension is Android only. There is no intention of supporting iOS. Instead
 The hope is to get it working with desktop simulators as well.
 
 # Projects
-* ### ChunkEMailLib
+* **ChunkEMailLib**
 Flex Library project that contains the AS3 API for the ANE.
-* ### ChunkEMailDefault
-Default implementation of API that should allow this ANE to work on desktop simulators. Should, but doesn't at the moment
-* ### ChunkEMailANE
+* **ChunkEMailDefault**
+Flex Library project. Default implementation of API that should allow this ANE to work on desktop simulators. Should, but doesn't at the moment
+* **ChunkEMailANE**
 Android project in Java used to generate the jar for the ANE
-* ### ChunkEMailTest
-Sample implementation project
+* **ChunkEMailTest**
+Flex Project. Sample implementation project.
 
 # Build the ANE
 To build the ANE, 
@@ -25,3 +25,4 @@ adt -package -target ane ChunkEMail.ane extension.xml -swc ChunkEMailLib.swc -pl
 
 This assumes you have adt installed. If you don't, follow the instructions in this tutorial, which is how I got my start:
 http://www.adobe.com/devnet/air/articles/building-ane-ios-android-pt1.html
+Part 5 of that article tells how to structure your build files for the ANE.

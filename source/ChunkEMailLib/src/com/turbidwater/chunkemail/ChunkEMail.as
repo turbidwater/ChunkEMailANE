@@ -27,8 +27,6 @@ package com.turbidwater.chunkemail
 			{
 				throw new Error( "ChunkEMail native extension is not supported on this platform." );
 			}
-			
-			extensionContext.addEventListener( StatusEvent.STATUS, onStatus );
 		}
 		
 		public static function getInstance():ChunkEMail
@@ -61,19 +59,6 @@ package com.turbidwater.chunkemail
 		{
 			extensionContext.call( 'sendMail', toAddresses, subject, body, title, ccAddresses, bccAddresses );
 		}
-		
-		
-		//-----------------------------------------------------------
-		//  EVENT LISTENERS
-		//-----------------------------------------------------------
-		private function onStatus( event:StatusEvent ):void 
-		{
-			trace( '### Status event ' + event.code );
-		}
-		
-		//-----------------------------------------------------------
-		//  GETTERS/SETTERS
-		//-----------------------------------------------------------	
 	}
 }
 
