@@ -7,13 +7,13 @@ This extension is Android only. There is no intention of supporting iOS. Instead
 The hope is to get it working with desktop simulators as well.
 
 # Projects
-*ChunkEMailLib*
+* ### ChunkEMailLib
 Flex Library project that contains the AS3 API for the ANE.
-*ChunkEMailDefault*
+* ### ChunkEMailDefault
 Default implementation of API that should allow this ANE to work on desktop simulators. Should, but doesn't at the moment
-*ChunkEMailANE*
+* ### ChunkEMailANE
 Android project in Java used to generate the jar for the ANE
-*ChunkEMailTest*
+* ### ChunkEMailTest
 Sample implementation project
 
 # Build the ANE
