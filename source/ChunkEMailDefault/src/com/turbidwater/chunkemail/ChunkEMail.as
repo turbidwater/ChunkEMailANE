@@ -35,6 +35,16 @@ package com.turbidwater.chunkemail
 		//  CONTROL
 		//-----------------------------------------------------------
 		/**
+		 * Is ChunkEMail supported?
+		 * 
+		 * @return	Boolean
+		 */
+		public static function isSupported():Boolean
+		{
+			return true;
+		}
+		
+		/**
 		 * Open the native composer with prepopulated values.
 		 * 
 		 * @param	toAddresses	(String) semicolon-separated list of email addresses

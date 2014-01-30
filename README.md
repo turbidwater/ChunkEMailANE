@@ -6,7 +6,7 @@ ANE aims to help you do it.
 This extension is Android only. There is no intention of supporting iOS. Instead try https://github.com/pkoscierzynski/NativeMailExtension.
 The hope is to get it working with desktop simulators as well.
 
-# Projects
+## Projects
 * **ChunkEMailLib**
 Flex Library project that contains the AS3 API for the ANE.
 * **ChunkEMailDefault**
@@ -16,7 +16,7 @@ Android project in Java used to generate the jar for the ANE
 * **ChunkEMailTest**
 Flex Project. Sample implementation project.
 
-# Build the ANE
+## Build the ANE
 To build the ANE, 
 1. go to the build directory in console 
 2. put in the following command:

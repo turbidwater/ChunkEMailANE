@@ -1,7 +1,6 @@
 package com.turbidwater.chunkemail
 {
 	import flash.events.EventDispatcher;
-	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
 	
 	public class ChunkEMail extends EventDispatcher
@@ -9,8 +8,7 @@ package com.turbidwater.chunkemail
 		//-----------------------------------------------------------
 		//  DECLARATIONS
 		//-----------------------------------------------------------
-		public var extensionContext:ExtensionContext;
-		
+		protected static var extensionContext:ExtensionContext = ExtensionContext.createExtensionContext( 'com.turbidwater.chunkemail', '' );
 		private static var _instance:ChunkEMail;
 		
 		
@@ -20,13 +18,6 @@ package com.turbidwater.chunkemail
 		public function ChunkEMail( sentry:SingletonSentry )
 		{
 			super();
-			
-			extensionContext = ExtensionContext.createExtensionContext( 'com.turbidwater.chunkemail', '' );
-			
-			if( !extensionContext ) 
-			{
-				throw new Error( "ChunkEMail native extension is not supported on this platform." );
-			}
 		}
 		
 		public static function getInstance():ChunkEMail
@@ -43,6 +34,16 @@ package com.turbidwater.chunkemail
 		//-----------------------------------------------------------
 		//  CONTROL
 		//-----------------------------------------------------------
+		/**
+		 * Is ChunkEMail supported?
+		 * 
+		 * @return	Boolean
+		 */
+		public static function isSuported():Boolean
+		{
+			return Boolean( extensionContext );
+		}
+		
 		/**
 		 * Open the native composer with prepopulated values.
 		 * 
