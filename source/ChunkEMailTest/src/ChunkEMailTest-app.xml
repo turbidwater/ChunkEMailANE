@@ -15,7 +15,7 @@
 
 	<!-- A universally unique application identifier. Must be unique across all AIR applications.
 	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
-	<id>ChunkEMailTest</id>
+	<id>com.turbidwater.chunkemail.ChunkEMailTest</id>
 
 	<!-- Used as the filename for the application. Required. -->
 	<filename>ChunkEMailTest</filename>
@@ -266,6 +266,7 @@
         <colorDepth>16bit</colorDepth>
         <manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto">
+				<application android:debuggable="true"/>
 			    <!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
 			    <!--Removing the permission android.permission.INTERNET will have the side effect
 		of preventing you from debugging your application on your device-->

@@ -1,6 +1,7 @@
 package com.turbidwater.chunkemail
 {
 	import flash.events.EventDispatcher;
+	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
 	
 	public class ChunkEMail extends EventDispatcher
@@ -20,7 +21,14 @@ package com.turbidwater.chunkemail
 		{
 			super();
 			
-			extensionContext = new ExtensionContext();
+			extensionContext = ExtensionContext.createExtensionContext( 'com.turbidwater.chunkemail', '' );
+			
+			if( !extensionContext ) 
+			{
+				throw new Error( "ChunkEMail native extension is not supported on this platform." );
+			}
+			
+			extensionContext.addEventListener( StatusEvent.STATUS, onStatus );
 		}
 		
 		public static function getInstance():ChunkEMail
@@ -58,7 +66,10 @@ package com.turbidwater.chunkemail
 		//-----------------------------------------------------------
 		//  EVENT LISTENERS
 		//-----------------------------------------------------------
-		
+		private function onStatus( event:StatusEvent ):void 
+		{
+			trace( '### Status event ' + event.code );
+		}
 		
 		//-----------------------------------------------------------
 		//  GETTERS/SETTERS
