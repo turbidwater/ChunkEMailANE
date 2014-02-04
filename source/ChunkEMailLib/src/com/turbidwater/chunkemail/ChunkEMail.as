@@ -39,7 +39,7 @@ package com.turbidwater.chunkemail
 		 * 
 		 * @return	Boolean
 		 */
-		public static function isSuported():Boolean
+		public static function isSupported():Boolean
 		{
 			return Boolean( extensionContext );
 		}
