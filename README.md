@@ -3,8 +3,8 @@ ChunkEMail is an AIR Native Extension designed to use the Android email composer
 a navigateToURL call, but there are character limits for doing things that way. If you want to prepopulate with a big chunk of email, this
 ANE aims to help you do it.
 
-This extension is Android only. There is no intention of supporting iOS. Instead try https://github.com/pkoscierzynski/NativeMailExtension.
-The hope is to get it working with desktop simulators as well.
+This extension is Android only (with desktop simulator support). There is no intention of supporting iOS. Instead try https://github.com/pkoscierzynski/NativeMailExtension.
+
 
 ## Projects
 * **ChunkEMailLib**
