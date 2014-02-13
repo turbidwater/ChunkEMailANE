@@ -26,3 +26,6 @@ adt -package -target ane ChunkEMail.ane extension.xml -swc ChunkEMailLib.swc -pl
 This assumes you have adt installed. If you don't, follow the instructions in this tutorial, which is how I got my start:
 http://www.adobe.com/devnet/air/articles/building-ane-ios-android-pt1.html
 Part 5 of that article tells how to structure your build files for the ANE.
+
+## License
+ChunkEMail is freely distributable under the terms of the MIT license.
